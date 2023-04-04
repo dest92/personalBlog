@@ -1,4 +1,10 @@
-html,
+/* background: linear-gradient(to bottom right, #080952, #dd0808); */
+html {
+  /* background: linear-gradient(to bottom right, #080952, #0872dd); */
+  background: linear-gradient(to bottom right, #080952, #dd0808);
+  animation: gradientAnimation 10s ease-in-out infinite;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -12,8 +18,19 @@ body {
   box-sizing: border-box;
 }
 
+p,
+h2,
+h1,
+li {
+  color: white;
+}
+
+li {
+  font-style: italic;
+}
+
 a {
-  color: #0070f3;
+  color: #6adfff;
   text-decoration: none;
 }
 
@@ -24,4 +41,27 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  40% {
+    background-position: 70% 30%;
+  }
+  60% {
+    background-position: 30% 70%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 0.5rem;
+  }
 }

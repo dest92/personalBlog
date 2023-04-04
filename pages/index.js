@@ -5,6 +5,7 @@ import { getSortedPostsData } from "../utils/posts";
 import Link from "next/link";
 import Date from "../components/date";
 
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -20,15 +21,14 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-     
       <section className={utilStyles.headingMd}>
         <p>
-          Hi! I´m <strong>Matías</strong>, systems developer specialized in backend, frontend
-          and computer security. Able to solve problems easily and predisposed
-          to continuous learning. I quickly adapt to any team and competent to
-          follow any instruction to the letter. I consider myself a proactive,
-          methodical and organized person, someone who assumes his
-          responsibilities and fights to meet every challenge.
+          Hi! I´m <strong>Matías</strong>, systems developer specialized in
+          backend, frontend and computer security. Able to solve problems easily
+          and predisposed to continuous learning. I quickly adapt to any team
+          and competent to follow any instruction to the letter. I consider
+          myself a proactive, methodical and organized person, someone who
+          assumes his responsibilities and fights to meet every challenge.
         </p>
       </section>
 
