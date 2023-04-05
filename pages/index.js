@@ -4,7 +4,9 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../utils/posts";
 import Link from "next/link";
 import Date from "../components/date";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -17,7 +19,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout home className="fade-in">
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -32,8 +34,17 @@ export default function Home({ allPostsData }) {
         </p>
       </section>
 
+      <section className={utilStyles.contact}>
+        <a href="https://github.com/dest92">
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+        <a href="https://www.linkedin.com/in/matiasacebal/">
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+      </section>
+
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>Proyects</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>

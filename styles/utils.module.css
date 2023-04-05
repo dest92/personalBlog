@@ -51,3 +51,20 @@
   color: #b2d4d2 !important;
 }
 
+.contact {
+  text-align: center;
+}
+.contact a {
+  color: white;
+  padding: 0.5rem;
+}
+
+.contact svg:hover {
+  color: crimson;
+  transform: scale(1.1) !important;
+}
+
+.contact svg {
+  width: 7% !important;
+  display: inline-block;
+}

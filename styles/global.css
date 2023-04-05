@@ -1,17 +1,25 @@
-/* background: linear-gradient(to bottom right, #080952, #dd0808); */
 html {
-  /* background: linear-gradient(to bottom right, #080952, #0872dd); */
-  background: linear-gradient(to bottom right, #080952, #dd0808);
-  animation: gradientAnimation 10s ease-in-out infinite;
+  /* background: linear-gradient(to bottom right, #000000, #dd0808);
+  /* animation: gradientAnimation 10s ease-in-out infinite; */
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  background: linear-gradient(-45deg, #000000, #dd0808,#053ca2,#000000);
+  background-size: 400% 400%;
+  /* animation: gradientAnimation 20s ease-in-out infinite; */
+  animation: gradient 60s ease infinite;
+ 
+  max-height: fit-content;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  transition: background 1s ease-in-out;
 }
 
 * {
@@ -32,6 +40,8 @@ li {
 a {
   color: #6adfff;
   text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
 }
 
 a:hover {
@@ -58,10 +68,38 @@ img {
   }
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 @media (max-width: 768px) {
+  html {
+    height: 100%;
+  }
   body {
     font-size: 16px;
     padding: 0.5rem;
+  }
+}
+
+.fade-in {
+  animation: fadeInAnimation 1s;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

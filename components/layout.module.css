@@ -2,6 +2,8 @@
   max-width: 36rem;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
+  transition: background 1s ease-in-out;
+  animation: fadeInAnimation 1s;
 }
 
 .header {
@@ -18,5 +20,14 @@
   .container {
     max-width: 100%;
     padding: 0 0.5rem;
+  }
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
