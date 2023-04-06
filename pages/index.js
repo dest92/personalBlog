@@ -25,12 +25,12 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hi! I´m <strong>Matías</strong>, systems developer specialized in
-          backend, frontend and computer security. Able to solve problems easily
-          and predisposed to continuous learning. I quickly adapt to any team
-          and competent to follow any instruction to the letter. I consider
-          myself a proactive, methodical and organized person, someone who
-          assumes his responsibilities and fights to meet every challenge.
+          Hi! My name is <strong>Matías</strong>, and I'm a systems developer specializing in
+          backend, frontend, and computer security. I'm capable of easily
+          solving problems and am always eager to continue learning. I adapt
+          quickly to any team and am competent in following instructions
+          precisely. I consider myself proactive, methodical, and organized, and
+          I take responsibility for my work and strive to meet any challenge.
         </p>
       </section>
 
