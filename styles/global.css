@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html {
   /* background: linear-gradient(to bottom right, #000000, #dd0808);
   /* animation: gradientAnimation 10s ease-in-out infinite; */

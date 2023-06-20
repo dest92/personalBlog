@@ -25,24 +25,32 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hi! My name is <strong>Matías</strong>, and I'm a systems developer specializing in
-          backend, frontend, and computer security. I'm capable of easily
-          solving problems and am always eager to continue learning. I adapt
-          quickly to any team and am competent in following instructions
+          Hi! My name is <strong>Matías</strong>, and I'm a systems developer
+          specializing in backend, frontend, and computer security. I'm capable
+          of easily solving problems and am always eager to continue learning. I
+          adapt quickly to any team and am competent in following instructions
           precisely. I consider myself proactive, methodical, and organized, and
           I take responsibility for my work and strive to meet any challenge.
         </p>
       </section>
 
-      <section className={utilStyles.contact}>
-        <a href="https://github.com/dest92">
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
-        <a href="https://www.linkedin.com/in/matiasacebal/">
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-      </section>
-
+      <div className="pt-10">
+        <section className={utilStyles.contact}>
+          <a href="https://github.com/dest92">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a href="https://www.linkedin.com/in/matiasacebal/">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </section>
+        <h1 className="text-center pt-20">Most used languages in GitHub</h1>
+        <div className="flex justify-center pt-5 pb-10  ">
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=dest92&theme=synthwave&hide_border=true&include_all_commits=true&count_private=true&layout=compact"
+            className="max-w-xl w-full"
+          />
+        </div>
+      </div>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Proyects</h2>
         <ul className={utilStyles.list}>
