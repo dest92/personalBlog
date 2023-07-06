@@ -12,18 +12,6 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
         {home ? (
@@ -36,7 +24,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt="me"
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className="text-3xl font-bold pt-2 pb-5">{name}</h1>
           </>
         ) : (
           <>
@@ -51,7 +39,7 @@ export default function Layout({ children, home }) {
               />
             </Link>
             <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
+              <Link href="/" className="text-3xl font-semibold pt-2 pb-5 text-white">
                 {name}
               </Link>
             </h2>
@@ -60,7 +48,7 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div className="pt-5">
           <Link href="/">← Back to home</Link>
         </div>
       )}
