@@ -16,6 +16,7 @@
     "@mui/material": "^5.11.15",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
+    "million": "^2.5.4",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
