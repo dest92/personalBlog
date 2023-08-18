@@ -52,7 +52,7 @@ export default function Home({ allPostsData }) {
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className="font-bold text-3xl pb-2">Proyects</h2>
+        <h2 className="font-bold text-3xl pb-2">Projects</h2>
         <ul className="font-medium text-xl ">
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
