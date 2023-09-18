@@ -25,12 +25,15 @@ export default function Home({ allPostsData }) {
       </Head>
       <div className="pb-5">
         <section className={utilStyles.contact}>
-          <a href="https://github.com/dest92">
+          <Link target="_blank" href="https://github.com/dest92">
             <FontAwesomeIcon icon={faGithub} />
-          </a>
-          <a href="https://www.linkedin.com/in/matiasacebal/">
+          </Link>
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/in/matiasacebal/"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
-          </a>
+          </Link>
         </section>
       </div>
 
@@ -45,9 +48,13 @@ export default function Home({ allPostsData }) {
         </p>
         <p className="text-center pt-5 pb-10">
           I´m currently working at{" "}
-          <a href="https://beachampion.gg" className="text-orange-400">
+          <Link
+            target="_blank"
+            href="https://beachampion.gg"
+            className="text-orange-400"
+          >
             Be a Champion
-          </a>
+          </Link>
         </p>
       </section>
 
