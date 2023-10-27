@@ -36,9 +36,8 @@ export default function Home({ allPostsData }) {
           </Link>
         </section>
       </div>
-
-      <section className={utilStyles.headingMd}>
-        <p>
+      <section>
+        <p className="font-sans">
           Hi! My name is <strong>Matías</strong>, and I'm a systems developer
           specializing in backend, frontend, and computer security. I'm capable
           of easily solving problems and am always eager to continue learning. I
@@ -57,13 +56,17 @@ export default function Home({ allPostsData }) {
           </Link>
         </p>
       </section>
-
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className="font-bold text-3xl pb-2">Projects</h2>
         <ul className="font-medium text-xl ">
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
+              <Link
+                href={`/posts/${id}`}
+                className="text-blue-300 font-sans hover:text-blue-600 underline decoration-transparent hover:decoration-current transition-all duration-300 ease-in-out"
+              >
+                {title}
+              </Link>
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
