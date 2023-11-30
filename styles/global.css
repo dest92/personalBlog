@@ -2,16 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
   /* background: linear-gradient(to bottom right, #000000, #dd0808);
   /* animation: gradientAnimation 10s ease-in-out infinite; */
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-  background: linear-gradient(-45deg, #000000, #dd0808,#053ca2,#000000);
+  background: linear-gradient(-45deg, #000000, #dd0808, #053ca2, #000000);
   background-size: 400% 400%;
   /* animation: gradientAnimation 20s ease-in-out infinite; */
   animation: gradient 60s ease infinite;
- 
+
   max-height: fit-content;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -74,17 +73,16 @@ img {
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
 
 @media (max-width: 768px) {
   html {

@@ -46,16 +46,21 @@ export default function Home({ allPostsData }) {
           precisely. I consider myself proactive, methodical, and organized, and
           I take responsibility for my work and strive to meet any challenge.
         </p>
-        <p className="text-center pt-5 pb-10">
-          I´m currently working at{" "}
-          <Link
-            target="_blank"
-            href="https://beachampion.gg"
-            className="text-orange-400"
+        <div className="text-center pt-5 pb-10">
+          I'm currently working at{" "}
+          <div
+            className="tooltip tooltip-bottom"
+            data-tip="as a full stack developer"
           >
-            Be a Champion
-          </Link>
-        </p>
+            <Link
+              target="_blank"
+              href="https://beachampion.gg"
+              className="link link-primary"
+            >
+              Be a Champion
+            </Link>
+          </div>
+        </div>
       </section>
       <section>
         <h2 className="font-bold text-3xl pb-2">Projects</h2>
