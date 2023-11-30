@@ -2,6 +2,8 @@ import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../utils/posts";
 import Head from "next/head";
 import Date from "../../components/date";
+import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -23,7 +25,10 @@ export default function Post({ postData }) {
         <div className="font-light text-gray-400 pb-5">
           <Date dateString={postData.date} />
         </div>
-        <div  dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <ReactMarkdown
+          children={postData.contentMarkdown}
+          remarkPlugins={[gfm]}
+        />
       </article>
     </Layout>
   );

@@ -7,6 +7,7 @@ import Date from "../components/date";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import PostCard from "../components/PostCard";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -45,35 +46,29 @@ export default function Home({ allPostsData }) {
           precisely. I consider myself proactive, methodical, and organized, and
           I take responsibility for my work and strive to meet any challenge.
         </p>
-        <p className="text-center pt-5 pb-10">
-          I´m currently working at{" "}
-          <Link
-            target="_blank"
-            href="https://beachampion.gg"
-            className="text-orange-400"
+        <div className="text-center pt-5 pb-10">
+          I'm currently working at{" "}
+          <div
+            className="tooltip tooltip-bottom"
+            data-tip="as a full stack developer"
           >
-            Be a Champion
-          </Link>
-        </p>
+            <Link
+              target="_blank"
+              href="https://beachampion.gg"
+              className="link link-primary"
+            >
+              Be a Champion
+            </Link>
+          </div>
+        </div>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section>
         <h2 className="font-bold text-3xl pb-2">Projects</h2>
-        <ul className="font-medium text-xl ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link
-                href={`/posts/${id}`}
-                className="text-blue-300 font-sans hover:text-blue-600 underline decoration-transparent hover:decoration-current transition-all duration-300 ease-in-out"
-              >
-                {title}
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
+            <PostCard key={id} id={id} date={date} title={title} />
           ))}
-        </ul>
+        </div>
       </section>
     </Layout>
   );
