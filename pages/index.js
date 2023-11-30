@@ -7,6 +7,7 @@ import Date from "../components/date";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import PostCard from "../components/PostCard";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -56,24 +57,13 @@ export default function Home({ allPostsData }) {
           </Link>
         </p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section>
         <h2 className="font-bold text-3xl pb-2">Projects</h2>
-        <ul className="font-medium text-xl ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link
-                href={`/posts/${id}`}
-                className="text-blue-300 font-sans hover:text-blue-600 underline decoration-transparent hover:decoration-current transition-all duration-300 ease-in-out"
-              >
-                {title}
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
+            <PostCard key={id} id={id} date={date} title={title} />
           ))}
-        </ul>
+        </div>
       </section>
     </Layout>
   );
